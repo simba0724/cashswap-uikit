@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add rimraf
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @kenshooui/react-menu
 
 PATH: 
   C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\xampp\mysql\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Git\cmd;C:\Users\star\anaconda3\Scripts;C:\composer;C:\Users\star\anaconda3;C:\Program Files (x86)\Yarn\bin\;C:\redis;C:\xampp\php;C:\Users\star\AppData\Local\Microsoft\WindowsApps;C:\Users\star\AppData\Roaming\npm;C:\Program Files\Azure Data Studio\bin;C:\Users\star\anaconda3\Scripts;C:\Users\star\AppData\Roaming\Composer\vendor\bin;C:\Users\star\anaconda3;C:\Users\star\AppData\Local\Yarn\bin;C:\Program Files (x86)\Yarn\bin;C:\Program Files\heroku\bin;C:\Users\star\AppData\Local\Programs\mongosh\;C:\redis;
@@ -73,6 +73,7 @@ npm manifest:
     },
     "dependencies": {
       "@popperjs/core": "^2.9.2",
+      "@szhsin/react-menu": "^1.11.0",
       "@types/lodash": "^4.14.168",
       "@types/styled-system": "^5.1.10",
       "lodash": "^4.17.20",
@@ -4304,6 +4305,13 @@ Lockfile:
     dependencies:
       "@styled-system/core" "^5.1.2"
       "@styled-system/css" "^5.1.5"
+  
+  "@szhsin/react-menu@^1.11.0":
+    version "1.11.0"
+    resolved "https://registry.yarnpkg.com/@szhsin/react-menu/-/react-menu-1.11.0.tgz#3b4929d5cf5bb676eac3dc962da3029080b82bc2"
+    integrity sha512-kaW/IpcokmyVwX7WGe6ijQI/xQDw5nQXUKyiioy40dm5gt45+Lo7cqGVUoy7Qj8275Q9tgN6hcazWX/DCcYUfQ==
+    dependencies:
+      prop-types "^15.7.2"
   
   "@testing-library/dom@^7.28.1":
     version "7.31.0"

@@ -3,10 +3,16 @@ import styled, { keyframes, DefaultTheme } from "styled-components";
 import { Text } from "../../../components/Text";
 import { Colors } from "../../../theme/types";
 import { MENU_ENTRY_HEIGHT } from "../config";
+import {
+  Menu,
+  MenuItem,
+  MenuButton
+} from '@szhsin/react-menu';
 
 export interface Props {
   secondary?: boolean;
   isActive?: boolean;
+  isOpen?: boolean;
   theme: DefaultTheme;
 }
 
@@ -26,24 +32,15 @@ const LinkLabel = styled.div<{ isPushed: boolean }>`
   flex-grow: 1;
 `;
 
-const MenuEntry = styled.div<Props>`
+const MenuEntry = styled(MenuButton)<Props>`
   cursor: pointer;
-  display: flex;
   align-items: center;
-  height: ${MENU_ENTRY_HEIGHT / 2}px;
-  margin: auto 0;
-  border-radius: ${MENU_ENTRY_HEIGHT / 4}px;
-  padding: ${({ secondary }) => (secondary ? "0" : "0 16px")};
-  font-size: ${({ secondary }) => (secondary ? "14px" : "16px")};
+  padding: 5px 20px;
+  font-size: 16px;
   background-color: ${({ isActive, theme }) => (isActive ? theme.colors.tertiary : "transparent")};
+  border: 0px;
   color: ${({ theme }) => theme.colors.textSubtle};
-
-  a {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
+  border-radius: 19px;
 
   svg {
     fill: ${({ theme }) => theme.colors.textSubtle};

@@ -12,10 +12,24 @@ import UserBlock from "./components/UserBlock";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import { NavProps } from "./types";
 import Avatar from "./components/Avatar";
+import SelectToken from "./components/Select";
 import Button from "../../components/Button/Button";
 
 import { HamburgerIcon } from "./icons";
 import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
+
+const Tokenlist = [
+  {
+    "name": "Ethereum",
+    "symbol": "Ethereum",
+    "logoURI": "/images/tokens/0x2170Ed0880ac9A755fd29B2688956BD959F933F8.png"
+  },
+  {
+    "name": "BSC",
+    "symbol": "BSC",
+    "logoURI": "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+  }
+]
 
 const Wrapper = styled.div`
   position: relative;
@@ -78,6 +92,7 @@ const Menu: React.FC<NavProps> = ({
   const [isPushed, setIsPushed] = useState(!isMobile);
   const [showMenu, setShowMenu] = useState(false);
   const refPrevOffset = useRef(window.pageYOffset);
+  const [index, setIndex] = useState(0);
 
   // Find the home link if provided
   const homeLink = links.find((link) => link.label === "Home");
@@ -108,9 +123,8 @@ const Menu: React.FC<NavProps> = ({
         </Flex>
         {!!login && !!logout && (
           <Flex>
+            <SelectToken options={Tokenlist} onChange={setIndex}/>
             <UserBlock account={account} login={login} logout={logout} />
-            {profile && <Avatar profile={profile} />}
-            <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} />
             {isMobile && <Button style={{height: 'auto', padding: 0, marginLeft: '16px', backgroundColor: 'transparent'}} aria-label="Toggle menu" mr="24px" onClick={() => {setShowMenu(!showMenu)}}><HamburgerIcon width="24px" color="textSubtle" /></Button>}
           </Flex>
         )}

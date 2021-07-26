@@ -9,7 +9,7 @@ interface AvatarProps {
 }
 
 const StyledAvatar = styled.div`
-  margin-left: 16px;
+  margin-right: 16px;
   position: relative;
 
   img {

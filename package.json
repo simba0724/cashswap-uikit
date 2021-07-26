@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.9.2",
+    "@szhsin/react-menu": "^1.11.0",
     "@types/lodash": "^4.14.168",
     "@types/styled-system": "^5.1.10",
     "lodash": "^4.17.20",
